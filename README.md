@@ -72,7 +72,7 @@ POST /api/products/add
 GET /api/products/all
 
 
-Author
+* Author
 
 Samiksha Purohit
 Java Full-Stack | Backend Developer
