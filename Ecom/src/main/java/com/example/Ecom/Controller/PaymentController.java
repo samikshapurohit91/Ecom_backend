@@ -1,0 +1,24 @@
+package com.example.Ecom.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.Ecom.entity.Payment;
+import com.example.Ecom.service.PaymentService;
+
+@RestController
+@RequestMapping("/api/payments")
+public class PaymentController {
+	
+	@Autowired
+    private PaymentService paymentService;
+
+    @PostMapping("/pay")
+    public Payment makePayment(@RequestBody Payment payment) {
+        return paymentService.makePayment(payment);
+    }
+
+}
